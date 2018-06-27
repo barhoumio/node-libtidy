@@ -1,5 +1,5 @@
 // Type definitions for node-libtidy v0.3
-// Project: node-libtidy / https://github.com/gagern/node-libtidy
+// Project: node-libtidy / https://github.com/barhoumio/node-libtidy
 // Definitions by: Wang Guan <momocraft@gmail.com>
 // vim: shiftwidth=2
 

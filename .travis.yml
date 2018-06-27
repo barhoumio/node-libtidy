@@ -1,51 +1,52 @@
 language: node_js
 os:
- - linux
- - osx
+- linux
+- osx
 node_js:
- - "4"
- - "5"
- - "6"
- - "7"
- - "8"
- - "9"
- - lts/*
- - stable
+- '4'
+- '5'
+- '6'
+- '7'
+- '8'
+- '9'
+- '10'
+- lts/*
+- stable
 sudo: false
 dist: trusty
 addons:
- apt:
-  sources:
-   - ubuntu-toolchain-r-test
-  packages:
-   - gcc-4.8
-   - g++-4.8
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - gcc-4.8
+    - g++-4.8
 env:
- - CC=gcc-4.8 CXX=g++-4.8
+- CC=gcc-4.8 CXX=g++-4.8
 before_install:
- - |
+- |
   if [[ ${TRAVIS_OS_NAME} == osx ]]; then
    export CXX=clang
    export CC=clang
   fi
- - $CC --version
- - $CXX --version
- - env
+- "$CC --version"
+- "$CXX --version"
+- env
 install:
- - npm install --build-from-source
+- npm install --build-from-source
 before_deploy:
- - node_modules/.bin/node-pre-gyp package
+- node_modules/.bin/node-pre-gyp package
 deploy:
- provider: releases
- tag_name: $TRAVIS_TAG
- draft: true
- api_key:
-  secure: m+4BLS1/qkn1h//I41aBEAYaTMTFF1uN9KjWqvfDuN8zcQPWIMjkCyBeRtsmgzwtALmRox2WHtrCNjlzxR55i7jS3bI8TD9IqPA34XRtWge2SLuKcuZ/kvKJYhZnoKvX9fLWEZUICwdybGBK6q3CGpEQvBF0Qdvo5T3Xy2qGi30g+HtHJNvedbSkC05/zB8JkLkWEzmBpHZThudrvY8lVyeZ33sszi4QnrKiSyssJPx2cp7sxmUzYTkKO84I+rp/GiamREyD7Bz3rA8//sNlPpdkRr5j65f3WIFAYq6pxDjTFWz8GV4PtH2r7EW5r1NqmUDNILMqGM4Vq2ycG7OtQpewu8uR4c7KT61wQLm/S1hlnf5/w1nsHcaXVstrtn2FgBG9IrkDH5PyCwKIURL+dNE/BqJ2lnqFWCSWPaBG2KhGp+FZewmFBeBTcHrqiMV9tNyLcUtcSAPDpBDpYrJyESTGyZ1P5cUwX6bfb2QT7apyTtVoF6TEuZeV1uTv5UpMd/PRdru9LOuUjsOBxAaxpXDtY0vHQcvWWAR2ymTeDkFjdVJo6DTxOsJixfUGC3+1bd/crZuCFkYdm0tB32AnPlYqLQsZ7RBnjFJqMbimFLZdI2z+c30tdin1Tq+BafPmujEkqYpKWToRusJVYtupLGgarwiK2+qKAIInxA5+aS0=
- file: build/stage/gagern/node-libtidy/releases/download/**/*.tar.gz
- file_glob: true
- skip_cleanup: true
- on:
-  repo: gagern/node-libtidy
+  provider: releases
+  tag_name: $TRAVIS_TAG
+  draft: true
+  api_key:
+    secure: FLeq5oP9gM+oyZQ9DiX4j/PWiMxpAy4c9yT8bOth+F4Ml3ACoB6Z/blINZsEUI9aZVgmlZna9E1KqEE/6S4SbwiX4DP7EHGojiqlBtc/ylRhluNFg1vTeWeyTNfrR3wiGbLgt/6UvIwDfUEoyzSzTll0tFLhKNhCuBrZPh6SQB4+kNxju85h4dWiRadspLiM/fFXRg+1RYpCj/oxJQW2L8nZtDDeFpxHOUlCnyLwlxOeT0Yk0kOByvgjitkly/jd9Xn3SAW+modTIkluEvLg+VR6hePI8iVXbdljOIBS4Yt009x1iTmjHb16d5sUdVeiK5phYhp3v0dICW7jK9ajxyBgyhz11aqZuUegLXOWYEiuWFQdeIuJM3tcRD5vBgjT1PUTkqQlUilQAzokK1b9rIwdoalp9aUxNRrS1qwZsR0VIS5wYdmlO0Us1S8yP8FHzH5a684bpHwSnRHkeaIS25YAb1qLf7GNChretqyoXKFpTv2BqOj+RgQjeb4tSxqxMjhIFSJnGhLpV6uDI12D3+yccA/RwG3eswl6vkwmeYxkD8XzWCEpTjvGRYIbZEZvNAs2hbVVAoAGt+5KYWKy8HSOyQt/am+895Ge4mJCg4IkJNY6Yndu/Gtffjt8NwlvxaEZfdr7KWe6uMn+cOsDgAInHx51l7BuIwunTO7hm4g=
+  file: build/stage/barhoumio/node-libtidy/releases/download/**/*.tar.gz
+  file_glob: true
+  skip_cleanup: true
+  on:
+  repo: barhoumio/node-libtidy
   tags: true
   condition: >
    ${TRAVIS_TAG} == v*([0-9]).*([0-9]).*([0-9])

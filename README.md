@@ -146,7 +146,7 @@ doc.options = {
 
 The following lists the full public interface of the package.
 Details on each item can be found in the
-[API documentation](https://github.com/gagern/node-libtidy/blob/master/API.md).
+[API documentation](https://github.com/barhoumio/node-libtidy/blob/master/API.md).
 
 - [**tidyBuffer(input, [opts], [cb])**][APItidyBuffer] – async function
 - [**TidyDoc()**][APITidyDoc] – constructor
@@ -180,37 +180,37 @@ Details on each item can be found in the
   - [**htmltidy**][APIhtmltidy] – namespace
     - [**tidy(input, [opts], cb)**][APItidy] – async function
 
-[APItidyBuffer]: https://github.com/gagern/node-libtidy/blob/master/API.md#tidyBuffer
-[APITidyDoc]: https://github.com/gagern/node-libtidy/blob/master/API.md#TidyDoc
-[APIcleanAndRepair]: https://github.com/gagern/node-libtidy/blob/master/API.md#TidyDoc.cleanAndRepair
-[APIcleanAndRepairSync]: https://github.com/gagern/node-libtidy/blob/master/API.md#TidyDoc.cleanAndRepairSync
-[APIgetOption]: https://github.com/gagern/node-libtidy/blob/master/API.md#TidyDoc.getOption
-[APIgetOptionList]: https://github.com/gagern/node-libtidy/blob/master/API.md#TidyDoc.getOptionList
-[APIoptGet]: https://github.com/gagern/node-libtidy/blob/master/API.md#TidyDoc.optGet
-[APIoptGetCurrPick]: https://github.com/gagern/node-libtidy/blob/master/API.md#TidyDoc.optGetCurrPick
-[APIoptGetDoc]: https://github.com/gagern/node-libtidy/blob/master/API.md#TidyDoc.optGetDoc
-[APIoptGetDocLinksList]: https://github.com/gagern/node-libtidy/blob/master/API.md#TidyDoc.optGetDocLinksList
-[APIoptSet]: https://github.com/gagern/node-libtidy/blob/master/API.md#TidyDoc.optSet
-[APIoptions]: https://github.com/gagern/node-libtidy/blob/master/API.md#TidyDoc.options
-[APIparseBuffer]: https://github.com/gagern/node-libtidy/blob/master/API.md#TidyDoc.parseBuffer
-[APIparseBufferSync]: https://github.com/gagern/node-libtidy/blob/master/API.md#TidyDoc.parseBufferSync
-[APIrunDiagnostics]: https://github.com/gagern/node-libtidy/blob/master/API.md#TidyDoc.runDiagnostics
-[APIrunDiagnosticsSync]: https://github.com/gagern/node-libtidy/blob/master/API.md#TidyDoc.runDiagnosticsSync
-[APIsaveBuffer]: https://github.com/gagern/node-libtidy/blob/master/API.md#TidyDoc.saveBuffer
-[APIsaveBufferSync]: https://github.com/gagern/node-libtidy/blob/master/API.md#TidyDoc.saveBufferSync
-[APItidyBuffer]: https://github.com/gagern/node-libtidy/blob/master/API.md#TidyDoc.tidyBuffer
-[APITidyOption]: https://github.com/gagern/node-libtidy/blob/master/API.md#TidyOption
-[APIcategory]: https://github.com/gagern/node-libtidy/blob/master/API.md#TidyOption.category
-[APIdefault]: https://github.com/gagern/node-libtidy/blob/master/API.md#TidyOption.default
-[APIid]: https://github.com/gagern/node-libtidy/blob/master/API.md#TidyOption.id
-[APIname]: https://github.com/gagern/node-libtidy/blob/master/API.md#TidyOption.name
-[APIpickList]: https://github.com/gagern/node-libtidy/blob/master/API.md#TidyOption.pickList
-[APIreadOnly]: https://github.com/gagern/node-libtidy/blob/master/API.md#TidyOption.readOnly
-[APItoString]: https://github.com/gagern/node-libtidy/blob/master/API.md#TidyOption.toString
-[APItype]: https://github.com/gagern/node-libtidy/blob/master/API.md#TidyOption.type
-[APIcompat]: https://github.com/gagern/node-libtidy/blob/master/API.md#compat
-[APIhtmltidy]: https://github.com/gagern/node-libtidy/blob/master/API.md#htmltidy
-[APItidy]: https://github.com/gagern/node-libtidy/blob/master/API.md#compat.htmltidy.tidy
+[APItidyBuffer]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#tidyBuffer
+[APITidyDoc]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#TidyDoc
+[APIcleanAndRepair]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#TidyDoc.cleanAndRepair
+[APIcleanAndRepairSync]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#TidyDoc.cleanAndRepairSync
+[APIgetOption]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#TidyDoc.getOption
+[APIgetOptionList]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#TidyDoc.getOptionList
+[APIoptGet]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#TidyDoc.optGet
+[APIoptGetCurrPick]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#TidyDoc.optGetCurrPick
+[APIoptGetDoc]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#TidyDoc.optGetDoc
+[APIoptGetDocLinksList]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#TidyDoc.optGetDocLinksList
+[APIoptSet]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#TidyDoc.optSet
+[APIoptions]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#TidyDoc.options
+[APIparseBuffer]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#TidyDoc.parseBuffer
+[APIparseBufferSync]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#TidyDoc.parseBufferSync
+[APIrunDiagnostics]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#TidyDoc.runDiagnostics
+[APIrunDiagnosticsSync]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#TidyDoc.runDiagnosticsSync
+[APIsaveBuffer]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#TidyDoc.saveBuffer
+[APIsaveBufferSync]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#TidyDoc.saveBufferSync
+[APItidyBuffer]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#TidyDoc.tidyBuffer
+[APITidyOption]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#TidyOption
+[APIcategory]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#TidyOption.category
+[APIdefault]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#TidyOption.default
+[APIid]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#TidyOption.id
+[APIname]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#TidyOption.name
+[APIpickList]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#TidyOption.pickList
+[APIreadOnly]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#TidyOption.readOnly
+[APItoString]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#TidyOption.toString
+[APItype]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#TidyOption.type
+[APIcompat]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#compat
+[APIhtmltidy]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#htmltidy
+[APItidy]: https://github.com/barhoumio/node-libtidy/blob/master/API.md#compat.htmltidy.tidy
 
 ## TypeScript support
 
@@ -229,7 +229,7 @@ For the license of the underlying library, please see
 To clone the project and start developing run the following commands
 
 ```sh
-git clone --recursive https://github.com/gagern/node-libtidy.git
+git clone --recursive https://github.com/barhoumio/node-libtidy.git
 cd node-libtidy
 npm install
 npm test

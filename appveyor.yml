@@ -1,12 +1,13 @@
 environment:
  github_release_token:
-  secure: TTQbwwwftUsijup2DaIPSnfBoYtXNrPVUFxNdFF/kugUndKeQk2k7YUSe1C1ojZn
+  secure: tSXeXxYI9VNP11Cu6VCUTEX7N3eCsAK72nuw0grdBFxWIftWgWRgm0fqCa+A0RH2
  matrix:
   - nodejs_version: 5
   - nodejs_version: 6
   - nodejs_version: 7
   - nodejs_version: 8
   - nodejs_version: 9
+  - nodejs_version: 10
 
 platform:
   - x86
@@ -31,7 +32,7 @@ after_test:
   - node_modules/.bin/node-pre-gyp package
 
 artifacts:
-  - path: build\stage\gagern\node-libtidy\releases\download\**\*.tar.gz
+  - path: build\stage\barhoumio\node-libtidy\releases\download\**\*.tar.gz
     name: binary
 
 deploy:

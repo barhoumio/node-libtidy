@@ -10,7 +10,7 @@
     "module_name": "tidy",
     "module_path": "./lib/",
     "host": "https://github.com",
-    "remote_path": "./gagern/node-libtidy/releases/download/v{version}/",
+    "remote_path": "./barhoumio/node-libtidy/releases/download/v{version}/",
     "package_name": "{node_abi}-{platform}-{arch}.tar.gz"
   },
   "types": "src/index.d.ts",
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gagern/node-libtidy.git"
+    "url": "git+https://github.com/barhoumio/node-libtidy.git"
   },
   "keywords": [
     "htmltidy",
@@ -43,9 +43,9 @@
   "license": "MIT",
   "gypfile": true,
   "bugs": {
-    "url": "https://github.com/gagern/node-libtidy/issues"
+    "url": "https://github.com/barhoumio/node-libtidy/issues"
   },
-  "homepage": "https://github.com/gagern/node-libtidy#readme",
+  "homepage": "https://github.com/barhoumio/node-libtidy#readme",
   "devDependencies": {
     "@types/chai": "^3.4.1",
     "@types/mocha": "^2.2.40",
@@ -58,8 +58,8 @@
     "typescript": "^2.2.2"
   },
   "dependencies": {
-    "nan": "^2.1.0",
-    "node-pre-gyp": "^0.6.36"
+    "nan": "^2.10.0",
+    "node-pre-gyp": "^0.10.2"
   },
   "bundledDependencies": [
     "node-pre-gyp"
