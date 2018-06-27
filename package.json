@@ -1,5 +1,5 @@
 {
-  "name": "libtidy",
+  "name": "node-libtidy",
   "version": "0.3.8",
   "description": "Node bindings to the HTML Tidy library",
   "main": "src/index.js",
@@ -61,9 +61,6 @@
     "nan": "^2.10.0",
     "node-pre-gyp": "^0.10.2"
   },
-  "bundledDependencies": [
-    "node-pre-gyp"
-  ],
   "files": [
     "src/",
     "test/",
@@ -75,5 +72,12 @@
     "tidy-html5/README/",
     "tidy-html5/src/",
     "tidy-html5/include/"
-  ]
+  ],
+  "bundleDependencies": [
+    "node-pre-gyp"
+  ],
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  }
 }
