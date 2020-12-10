@@ -1,13 +1,17 @@
 environment:
- github_release_token:
-  secure: tSXeXxYI9VNP11Cu6VCUTEX7N3eCsAK72nuw0grdBFxWIftWgWRgm0fqCa+A0RH2
- matrix:
-  - nodejs_version: 5
-  - nodejs_version: 6
-  - nodejs_version: 7
-  - nodejs_version: 8
-  - nodejs_version: 9
-  - nodejs_version: 10
+  github_release_token:
+    secure: Duzz7racpsOIDYAjEmNGNBVtOK092hHlepD/cYzZYaO2u6/KX/9hmeexQq0ARgRv
+  matrix:
+    - nodejs_version: 6
+    - nodejs_version: 7
+    - nodejs_version: 8
+    - nodejs_version: 9
+    - nodejs_version: 10
+    - nodejs_version: 11
+    - nodejs_version: 12
+    - nodejs_version: 13
+    - nodejs_version: 14
+    - nodejs_version: 15
 
 platform:
   - x86

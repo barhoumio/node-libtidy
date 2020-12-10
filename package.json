@@ -1,83 +1,85 @@
 {
   "name": "node-libtidy",
-  "version": "0.3.8",
+  "version": "0.4.0",
   "description": "Node bindings to the HTML Tidy library",
   "main": "src/index.js",
   "bin": {
-    "htmltidy": "src/cli.js"
+	"htmltidy": "src/cli.js"
   },
   "binary": {
-    "module_name": "tidy",
-    "module_path": "./lib/",
-    "host": "https://github.com",
-    "remote_path": "./barhoumio/node-libtidy/releases/download/v{version}/",
-    "package_name": "{node_abi}-{platform}-{arch}.tar.gz"
+	"module_name": "tidy",
+	"module_path": "./lib/",
+	"host": "https://github.com",
+	"remote_path": "./barhoumio/node-libtidy/releases/download/v{version}/",
+	"package_name": "{node_abi}-{platform}-{arch}.tar.gz"
   },
   "types": "src/index.d.ts",
   "scripts": {
-    "install": "node-pre-gyp install --fallback-to-build",
-    "prepublish": "node util/gen-typescript-decl.js",
-    "pretest": "node util/gen-typescript-decl.js",
-    "test": "mocha --compilers ts:ts-node/register"
+	"install": "node-pre-gyp install --fallback-to-build",
+	"prepublish": "node util/gen-typescript-decl.js",
+	"pretest": "node util/gen-typescript-decl.js",
+	"test-osx": "export LC_ALL=en_GB && mocha --require ts-node/register",
+	"test": "mocha --require ts-node/register"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/barhoumio/node-libtidy.git"
+	"type": "git",
+	"url": "git+https://github.com/barhoumio/node-libtidy.git"
   },
   "keywords": [
-    "htmltidy",
-    "libtidy",
-    "tidylib",
-    "html",
-    "tidy",
-    "html5",
-    "beautify",
-    "format",
-    "indent"
+	"htmltidy",
+	"libtidy",
+	"tidylib",
+	"html",
+	"tidy",
+	"html5",
+	"beautify",
+	"format",
+	"indent"
   ],
   "author": "Martin von Gagern <Martin.vGagern@gmx.net>",
   "contributors": [
-    "Raphael Ackermann <raphael.ackermann@gmail.com>",
-    "Wang Guan <momocraft@gmail.com>"
+	"Raphael Ackermann <raphael.ackermann@gmail.com>",
+	"Wang Guan <momocraft@gmail.com>",
+	"Barhoumi <oussama.ensit@gmail.com>"
   ],
   "license": "MIT",
   "gypfile": true,
   "bugs": {
-    "url": "https://github.com/barhoumio/node-libtidy/issues"
+	"url": "https://github.com/barhoumio/node-libtidy/issues"
   },
   "homepage": "https://github.com/barhoumio/node-libtidy#readme",
   "devDependencies": {
-    "@types/chai": "^3.4.1",
-    "@types/mocha": "^2.2.40",
-    "@types/node": "^7.0.12",
-    "chai": "^3.4.1",
-    "chai-subset": "^1.2.0",
-    "htmltidy2": "^0.1.4",
-    "mocha": "^3.1.2",
-    "ts-node": "^3.0.2",
-    "typescript": "^2.2.2"
+	"@types/chai": "^3.5.2",
+	"@types/mocha": "^2.2.48",
+	"@types/node": "^7.10.14",
+	"chai": "^3.5.0",
+	"chai-subset": "^1.6.0",
+	"htmltidy2": "^0.3.0",
+	"mocha": "^3.5.3",
+	"ts-node": "^3.3.0",
+	"typescript": "^2.9.2"
   },
   "dependencies": {
-    "nan": "^2.10.0",
-    "node-pre-gyp": "^0.10.2"
+	"nan": "^2.14.2",
+	"node-pre-gyp": "^0.17.0"
   },
   "files": [
-    "src/",
-    "test/",
-    "/*.js",
-    "/*.md",
-    "binding.gyp",
-    "tidy-html5/version.txt",
-    "tidy-html5/README.md",
-    "tidy-html5/README/",
-    "tidy-html5/src/",
-    "tidy-html5/include/"
+	"src/",
+	"test/",
+	"/*.js",
+	"/*.md",
+	"binding.gyp",
+	"tidy-html5/version.txt",
+	"tidy-html5/README.md",
+	"tidy-html5/README/",
+	"tidy-html5/src/",
+	"tidy-html5/include/"
   ],
   "bundleDependencies": [
-    "node-pre-gyp"
+	"node-pre-gyp"
   ],
   "directories": {
-    "lib": "lib",
-    "test": "test"
+	"lib": "lib",
+	"test": "test"
   }
 }

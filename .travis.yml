@@ -3,13 +3,16 @@ os:
 - linux
 - osx
 node_js:
-- '4'
-- '5'
 - '6'
 - '7'
 - '8'
 - '9'
 - '10'
+- '11'
+- '12'
+- '13'
+- '14'
+- '15'
 - lts/*
 - stable
 sudo: false
@@ -38,16 +41,15 @@ before_deploy:
 - node_modules/.bin/node-pre-gyp package
 deploy:
   provider: releases
-  tag_name: $TRAVIS_TAG
+  tag_name: "$TRAVIS_TAG"
   draft: true
   api_key:
-    secure: FLeq5oP9gM+oyZQ9DiX4j/PWiMxpAy4c9yT8bOth+F4Ml3ACoB6Z/blINZsEUI9aZVgmlZna9E1KqEE/6S4SbwiX4DP7EHGojiqlBtc/ylRhluNFg1vTeWeyTNfrR3wiGbLgt/6UvIwDfUEoyzSzTll0tFLhKNhCuBrZPh6SQB4+kNxju85h4dWiRadspLiM/fFXRg+1RYpCj/oxJQW2L8nZtDDeFpxHOUlCnyLwlxOeT0Yk0kOByvgjitkly/jd9Xn3SAW+modTIkluEvLg+VR6hePI8iVXbdljOIBS4Yt009x1iTmjHb16d5sUdVeiK5phYhp3v0dICW7jK9ajxyBgyhz11aqZuUegLXOWYEiuWFQdeIuJM3tcRD5vBgjT1PUTkqQlUilQAzokK1b9rIwdoalp9aUxNRrS1qwZsR0VIS5wYdmlO0Us1S8yP8FHzH5a684bpHwSnRHkeaIS25YAb1qLf7GNChretqyoXKFpTv2BqOj+RgQjeb4tSxqxMjhIFSJnGhLpV6uDI12D3+yccA/RwG3eswl6vkwmeYxkD8XzWCEpTjvGRYIbZEZvNAs2hbVVAoAGt+5KYWKy8HSOyQt/am+895Ge4mJCg4IkJNY6Yndu/Gtffjt8NwlvxaEZfdr7KWe6uMn+cOsDgAInHx51l7BuIwunTO7hm4g=
+    secure: lgSczkbbnNx4pR83ebecwat4vpM+Il5vmxAePErkGxCzINycnf35ZJpUd/MLmk5gMD/nJTVRbhDRZ+oVwE6G1y4gWZrDvytFGnrMUULJEPi1SPTq+htIKgnlB0JSO+HGSgUXS1njIqaMnmPjgB0Ndvdw6m290mjy2IpEF0NrGKv3zDiSOUvgeeufuvfc1uJo34II3Q14nBdAhA/+xbKnHtJOf0Xy+WX0bw6YNNZ6jtGT6YShN2raQWJrSM1cqe/Y4ehrGMUtgR4wbfOlw2fqalXlvuUwI235lMuBc9bK1WHWMv9A2sCJsTJ8F6HmrYLlyIJZkEzKeOw67f+Cb47voFliif0gHhAkijqhZ/00/8nFuby/+wSEvIBF6ke8gLAum/qlSTPcK35bzj3LZHSRUJCK2zv5x7meIsr3JGIoIgYaEWHYqmgQjVYrLzP5T/7vKEeLuIRKAnYJmSRBZS/m1az5+9efNATC9ciGjOe0W6/Zdzu79iV4Z5l6t2PV6yxTbUho/COQnFn/60/Tt2rLCbJlCK4Gm3m/TEDQdUn3M3KnuyRSboKOLERHYiZEWc2wFJAiSVl4EUZyUXUqmIO9fXaFxZkmbr19/RDXiKysQ3NpU5RXTVCCIsGY8MzeZdHdzrCV0hCQUk9fwSczOp7bbeRFV+3kINqWHEb/4oPHMP8=
   file: build/stage/barhoumio/node-libtidy/releases/download/**/*.tar.gz
   file_glob: true
   skip_cleanup: true
   on:
-  repo: barhoumio/node-libtidy
-  tags: true
-  condition: >
-   ${TRAVIS_TAG} == v*([0-9]).*([0-9]).*([0-9])
-   && ${TRAVIS_NODE_VERSION} == [0-9]*
+    repo: barhoumio/node-libtidy
+    tags: true
+    condition: "${TRAVIS_TAG} == v*([0-9]).*([0-9]).*([0-9]) && ${TRAVIS_NODE_VERSION}
+      == [0-9]*\n"
