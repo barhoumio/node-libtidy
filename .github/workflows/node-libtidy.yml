@@ -56,9 +56,10 @@ jobs:
         node_js:
         - '18'
         os:
-        - ubuntu-latest
-        - macos-latest
-        - windows-latest
+        - ubuntu-20.04
+        - macos-13
+        - macos-13-xlarge
+        - windows-2019
         include:
         - CC: gcc-4.8
         - CXX: g++-4.8
